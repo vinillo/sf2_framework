@@ -1,7 +1,5 @@
-<?php
-// framework/bye.php
+<!-- example.com/src/pages/hello.php -->
 
-require_once __DIR__.'/init.php';
+<?php $name = $request->get('name', 'World') ?>
 
-$response->setContent('Goodbye!');
-$response->send();
+Bye <?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>
